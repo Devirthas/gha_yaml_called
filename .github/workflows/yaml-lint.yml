@@ -17,11 +17,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Show current dirr
-        run: pwd
-
       - name: Install yamllint
         run: sudo apt-get update && sudo apt-get install -y yamllint
 
+      - name: Show current dirr
+        run: pwd
+
+      - name: List all files in directory
+        run: ls -R
+        
       - name: Run yamllint
         run: yamllint ${{ inputs.yaml_files }}
