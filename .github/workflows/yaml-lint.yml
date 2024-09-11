@@ -3,12 +3,6 @@ name: YAML Lint
 
 on:
   workflow_call:  # This allows other repositories to call this workflow
-    inputs:
-      yaml_files:
-        description: "YAML files to lint"
-        required: true
-        type: string
-        default: "**/*.yaml"
 
 jobs:
   yaml-lint:
@@ -20,14 +14,14 @@ jobs:
       - name: Install yamllint
         run: sudo apt-get update && sudo apt-get install -y yamllint
 
-      - name: Show current dirr
-        run: pwd
+      # - name: Show current dirr
+      #   run: pwd
 
-      - name: check if bash installed
-        run: which bash
+      # - name: check if bash installed
+      #   run: which bash
 
-      - name: List all files in directory
-        run: ls -R
+      # - name: List all files in directory
+      #   run: ls -R
         
       - name: Run yamllint
-        run: yamllint ${{ inputs.yaml_files }}
+        run: yamllint .
