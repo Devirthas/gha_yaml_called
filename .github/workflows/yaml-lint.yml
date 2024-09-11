@@ -8,7 +8,7 @@ on:
         description: "YAML files to lint"
         required: true
         type: string
-        default: "*.yaml **/*.yaml"
+        default: "**/*.yaml"
 
 jobs:
   yaml-lint:
