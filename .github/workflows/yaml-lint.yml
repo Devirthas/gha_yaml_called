@@ -23,6 +23,9 @@ jobs:
       - name: Show current dirr
         run: pwd
 
+      - name: check if bash installed
+        run: which bash
+
       - name: List all files in directory
         run: ls -R
         
