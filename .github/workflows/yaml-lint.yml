@@ -1,14 +1,14 @@
 ---
 name: YAML Lint
 
-"on":
-  workflow_call:  #  allows other repos to call this workflow
+on:
+  workflow_call:  # This allows other repositories to call this workflow
     inputs:
       yaml_files:
-        description: 'YAML files to lint'
+        description: "YAML files to lint"
         required: true
         type: string
-        default: '*.yaml'
+        default: "**/*.yaml"
 
 jobs:
   yaml-lint:
