@@ -10,18 +10,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+        
       - name: Install yamllint
         run: sudo apt-get update && sudo apt-get install -y yamllint
-
-      # - name: Show current dirr
-      #   run: pwd
-
-      # - name: check if bash installed
-      #   run: which bash
-
-      # - name: List all files in directory
-      #   run: ls -R
         
       - name: Run yamllint
         run: yamllint .
